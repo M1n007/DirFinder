@@ -66,15 +66,17 @@ export default class DirFinder extends React.Component {
             </Item>
         </Form>
         <Button block primary onPress={() => this.handleCek()}>
-            <Text style={{color:'white'}}>Scan</Text>
+            {
+                this.state.isLoading == true ? (
+                    <Spinner color='green'/>
+                ):(
+                    <Text style={{color:'white'}}>Scan</Text>
+                )
+            }
         </Button>
         <Text>Result :</Text>
         <Card>
           <CardItem>
-            {
-              this.state.isLoading == true ? (
-                  <Spinner color='green'/>
-              ):(
                 <View>
                   <FlatList
                     data={this.state.dataSource}
@@ -82,8 +84,6 @@ export default class DirFinder extends React.Component {
                     keyExtractor={(item, index) => index}
                   />
                 </View>
-              )
-            }
           </CardItem>
         </Card>
 
