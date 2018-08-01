@@ -5,6 +5,8 @@
 # DEMO
 ![DEMO](https://i.imgur.com/RKZjbca.gif)
 
+https://i.imgur.com/RKZjbca.gif
+
 DirFinder is application for android to bruteforce directory on website.
 
 
